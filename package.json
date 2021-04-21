@@ -1,0 +1,30 @@
+{
+  "name": "simplenodejsapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanarah/LAB5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sanarah/LAB5/issues"
+  },
+  "homepage": "https://github.com/sanarah/LAB5#readme"
+}
