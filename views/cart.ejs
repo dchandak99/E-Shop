@@ -1,0 +1,40 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/cart.css">
+<link rel="stylesheet" href="/css/forms.css">
+<link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+<%- include('./includes/navigation.ejs') %>
+
+<main>
+    <h1> Credits Available: <%= credits%> </h1>
+    <form action="http://localhost:3000/orders" method="post">
+        <button class="btn" type="submit">Buy</button>
+        <input type="hidden" name="carts">
+    </form>
+
+    <div class="grid">
+        <% for (var i = 0; i < carts.length; i++) { %>
+        <% var cart = carts[i]; %>
+    <article class="card product-item">
+                    <header class="card__header">
+                        <h1 class="product__title">
+                            <%= cart.title %>
+                        </h1>
+                    </header>
+                    <div class="card__image">
+                        <img src="<%= cart.image %>" height="150px"   alt="<%= cart.title %>">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="product__price"> $
+                            <%= cart.price %>
+                        </h3>
+                        <h3 class="product__description">Qt Ord: 
+                            <%= cart.qty %>
+                        </h3>
+                    </div>
+    </article>
+        <% } %>
+    </div>
+</main>
+<%- include('./includes/end.ejs') %>
