@@ -1,1 +1,1 @@
-This is the controller part of the architecture
+This is the controller part of the MVC architecture
